@@ -3,7 +3,7 @@ import { Row, Col } from '.'
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../services/state/actions'
 
-export default function List({ data, filters }) {
+export default function List({ data, filters, loading }) {
     const dispatch = useDispatch();
 
     const vehicles = () => {
@@ -31,7 +31,7 @@ export default function List({ data, filters }) {
 
     return (
         <Col className="listContainer">
-            {vehicles() && vehicles().map((item, index) =>
+            {(vehicles().length > 0 && !loading) ? vehicles().map((item, index) =>
                 (<Row className="item" key={index}>
                     <Col>
                         <img
@@ -60,7 +60,11 @@ export default function List({ data, filters }) {
                         </Row>
                     </Col>
                 </Row>)
-            )}
+            ) : 
+            <div>
+                <h3 style={{ textAlign: "center" }}>NO CARS FOUND</h3>
+            </div>
+            }
         </Col >
     );
 }

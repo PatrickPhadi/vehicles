@@ -8,23 +8,35 @@ export default function FiltersComponent({ setFilter, filters }) {
                 <p>Manufacture</p>
                 <Select
                     value={filters.manufacturer}
-                    onChange={(e) => setFilter({manufacturer: e.target.value})}
+                    onChange={(e) => setFilter({ manufacturer: e.target.value })}
                     data={[
                         {
                             label: "ANY",
                             value: "ANY"
                         },
                         {
-                            label: "BMW",
-                            value: "BMW"
-                        },
-                        {
                             label: "Audi",
                             value: "Audi"
                         },
                         {
+                            label: "BMW",
+                            value: "BMW"
+                        },
+                        {
+                            label: "Ford",
+                            value: "Ford"
+                        },
+                        {
                             label: "Nissan",
                             value: "Nissan"
+                        },
+                        {
+                            label: "Mercedes-Benz",
+                            value: "Mercedes-Benz"
+                        },
+                        {
+                            label: "Porsche",
+                            value: "Porsche"
                         },
                     ]}
                 />
@@ -33,7 +45,7 @@ export default function FiltersComponent({ setFilter, filters }) {
                 <p>Body Style</p>
                 <Select
                     value={filters.body}
-                    onChange={(e) => setFilter({body: e.target.value})}
+                    onChange={(e) => setFilter({ body: e.target.value })}
                     data={[
                         {
                             label: "ANY",
@@ -61,7 +73,7 @@ export default function FiltersComponent({ setFilter, filters }) {
                 <p>From</p>
                 <Select
                     value={filters.from}
-                    onChange={(e) => setFilter({from: e.target.value})}
+                    onChange={(e) => setFilter({ from: e.target.value })}
                     data={[
                         {
                             label: "ANY",
@@ -118,7 +130,7 @@ export default function FiltersComponent({ setFilter, filters }) {
                 <p>To</p>
                 <Select
                     value={filters.to}
-                    onChange={(e) => setFilter({to: e.target.value})}
+                    onChange={(e) => setFilter({ to: e.target.value })}
                     data={[
                         {
                             label: "ANY",
