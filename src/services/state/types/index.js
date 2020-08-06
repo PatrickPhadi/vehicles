@@ -1,0 +1,6 @@
+export const REQUEST_ERROR = 'REQUEST/ERROR';
+export const FETCHED_LIST = 'LIST/FETCHED';
+export const FETCHING_LIST = 'LIST/FETCHING';
+export const CANCEL_REQUEST = 'REQUEST/CANCELLED';
+export const ADD_ITEM = 'ADD/ITEM/CART';
+export const REMOVE_ITEM = 'REMOVE/ITEM/CART';

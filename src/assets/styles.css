@@ -1,0 +1,6 @@
+.headerContainer {
+    display: "flex";
+    background-color: "#ccc";
+    flex-direction: "row";
+    justify-content: "flex-end";
+}
